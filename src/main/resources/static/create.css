@@ -1,0 +1,88 @@
+
+.xx{}
+
+.oo{}
+
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.pick-row {
+  width: 390px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pick-item {
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.visa{
+  background-image:url("blank.png");
+}
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
+
+.x {
+	height: 100%;
+	width: 100%;
+	background-image:url("x.png");
+	background-size:contain;
+    background-repeat:no-repeat;
+    margin-top: 24px;
+}
+
+.o {
+	height: 100%;
+	width: 100%;
+	background-image:url("o.png");
+	background-size:contain;
+    background-repeat:no-repeat;
+    margin-top: 24px;
+}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc.xx{
+  background-image:url("x.png");
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.cc-selector input:checked +.drinkcard-cc.oo{
+  background-image:url("o.png");
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:100px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}

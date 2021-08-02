@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Tic-tac-toe</title>
+    <link href="/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="w500 mt100">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Find game by tag</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+          <div>
+          <button type="button" class="ml20 btn btn-primary btn-lg">Search</button>
+        <a th:href="@{/games/create}"<button type="button"  class="ml20 btn btn-secondary btn-lg">Create new game</button></a>
+    </div>
+	    <div class="tile-container mt50">
+	        <form th:action="@{/games/join}" method="post">
+	    	<div class="tile-row" th:each="row: ${gamesRows}">
+	    		<div class="tile-item" th:each="game: ${row}">
+	    			<div class="tile-item-row">
+	    				<div class="tile-image">
+	    					<img th:if="${game.topLeft == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.topLeft == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.topLeft == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    				<div class="tile-image">
+	    					<img th:if="${game.topCenter == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.topCenter == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.topCenter == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    				<div class="tile-image">
+	    					<img th:if="${game.topRight == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.topRight == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.topRight == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    			</div>
+	    			<div class="tile-item-row">
+	    				<div class="tile-image">
+	    					<img th:if="${game.centerLeft == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.centerLeft == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.centerLeft == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    				<div class="tile-image">
+	    					<img th:if="${game.centerCenter == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.centerCenter == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.centerCenter == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    				<div class="tile-image">
+	    					<img th:if="${game.centerRight == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.centerRight == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.centerRight == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    			</div>
+	    			<div class="tile-item-row">
+	    				<div class="tile-image">
+	    					<img th:if="${game.lowLeft == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.lowLeft == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.lowLeft == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    				<div class="tile-image">
+	    					<img th:if="${game.lowCenter == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.lowCenter == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.lowCenter == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    				<div class="tile-image">
+	    					<img th:if="${game.lowRight == 'x'}" th:src="@{/x.png}"/>
+	    					<img th:if="${game.lowRight == 'o'}" th:src="@{/o.png}"/>
+	    					<img th:if="${game.lowRight == null}" th:src="@{/blank.png}"/>
+	    				</div>
+	    			</div>
+	    			<button type="submit" class="btn btn-danger" name="id" th:value="${game.id}">Join</button>
+	    		</div>
+	    	</div>
+	        </form>
+	    </div>
+</body>
+</html>

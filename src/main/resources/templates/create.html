@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Tic-tac-toe</title>
+    <link href="/style.css" rel="stylesheet">
+    <link href="/create.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="display-1">Create new game</h1>
+    <form action="/games/create" method="post">
+    <div class="container">
+      <div class="pick-row cc-selector">
+        <div class="pick-item">
+          <input id="topLeft" type="radio" name="pick" value="topLeft" />
+        <label class="drinkcard-cc visa xx" for="topLeft"></label>
+        </div>
+        <div class="pick-item">
+          <input id="topCenter" type="radio" name="pick" value="topCenter" />
+        <label class="drinkcard-cc visa xx" for="topCenter"></label>
+        </div>
+        <div class="pick-item">
+          <input id="topRight" type="radio" name="pick" value="topRight" />
+        <label class="drinkcard-cc visa xx" for="topRight"></label>
+        </div>
+      </div>
+      <div class="pick-row cc-selector">
+        <div class="pick-item">
+          <input id="centerLeft" type="radio" name="pick" value="centerLeft" />
+        <label class="drinkcard-cc visa xx" for="centerLeft"></label>
+        </div>
+        <div class="pick-item">
+          <input id="centerCenter" type="radio" name="pick" value="centerCenter" />
+        <label class="drinkcard-cc visa xx" for="centerCenter"></label>
+        </div>
+        <div class="pick-item">
+          <input id="centerRight" type="radio" name="pick" value="centerRight" />
+        <label class="drinkcard-cc visa xx" for="centerRight"></label>
+        </div>
+      </div>
+      <div class="pick-row cc-selector">
+        <div class="pick-item">
+          <input id="lowLeft" type="radio" name="pick" value="lowLeft" />
+        <label class="drinkcard-cc visa xx" for="lowLeft"></label>
+        </div>
+        <div class="pick-item">
+          <input id="lowCenter" type="radio" name="pick" value="lowCenter" />
+        <label class="drinkcard-cc visa xx" for="lowCenter"></label>
+        </div>
+        <div class="pick-item">
+          <input id="lowRight" type="radio" name="pick" value="lowRight" />
+        <label class="drinkcard-cc visa xx" for="lowRight"></label>
+        </div>
+      </div>
+      <div class="pick-row">
+        <button type="submit" class="btn btn-light btn-lg">Submit</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
